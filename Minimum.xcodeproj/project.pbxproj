@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		043BE12B230EB2C3004D12B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE12A230EB2C3004D12B1 /* AppDelegate.swift */; };
-		043BE12D230EB2C3004D12B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE12C230EB2C3004D12B1 /* ViewController.swift */; };
 		043BE130230EB2C3004D12B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043BE12E230EB2C3004D12B1 /* Main.storyboard */; };
 		043BE132230EB2C5004D12B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043BE131230EB2C5004D12B1 /* Assets.xcassets */; };
 		043BE135230EB2C5004D12B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043BE133230EB2C5004D12B1 /* LaunchScreen.storyboard */; };
+		FCCA2A41230EB8FD007E6C8E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A40230EB8FD007E6C8E /* MainViewController.swift */; };
+		FCCA2A43230EB916007E6C8E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A42230EB916007E6C8E /* MapViewController.swift */; };
+		FCCA2A45230EB97C007E6C8E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A44230EB97C007E6C8E /* LocationViewController.swift */; };
+		FCCA2A47230EB9D2007E6C8E /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A46230EB9D2007E6C8E /* CompletedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		043BE127230EB2C3004D12B1 /* Minimum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minimum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043BE12A230EB2C3004D12B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		043BE12C230EB2C3004D12B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		043BE12F230EB2C3004D12B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		043BE131230EB2C5004D12B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043BE134230EB2C5004D12B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043BE136230EB2C5004D12B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCCA2A40230EB8FD007E6C8E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FCCA2A42230EB916007E6C8E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FCCA2A44230EB97C007E6C8E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		FCCA2A46230EB9D2007E6C8E /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,73 @@
 		043BE129230EB2C3004D12B1 /* Minimum */ = {
 			isa = PBXGroup;
 			children = (
+				FCCA2A3A230EB896007E6C8E /* Utils */,
+				FCCA2A39230EB890007E6C8E /* Pages */,
 				043BE12A230EB2C3004D12B1 /* AppDelegate.swift */,
-				043BE12C230EB2C3004D12B1 /* ViewController.swift */,
-				043BE12E230EB2C3004D12B1 /* Main.storyboard */,
 				043BE131230EB2C5004D12B1 /* Assets.xcassets */,
 				043BE133230EB2C5004D12B1 /* LaunchScreen.storyboard */,
 				043BE136230EB2C5004D12B1 /* Info.plist */,
 			);
 			path = Minimum;
+			sourceTree = "<group>";
+		};
+		FCCA2A39230EB890007E6C8E /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				043BE12E230EB2C3004D12B1 /* Main.storyboard */,
+				FCCA2A3F230EB8C2007E6C8E /* Controller */,
+				FCCA2A3E230EB8BE007E6C8E /* View */,
+				FCCA2A3D230EB8AA007E6C8E /* Model */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		FCCA2A3A230EB896007E6C8E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA2A3C230EB8A0007E6C8E /* Extensions */,
+				FCCA2A3B230EB89A007E6C8E /* Network */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FCCA2A3B230EB89A007E6C8E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FCCA2A3C230EB8A0007E6C8E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FCCA2A3D230EB8AA007E6C8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCCA2A3E230EB8BE007E6C8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCCA2A3F230EB8C2007E6C8E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA2A40230EB8FD007E6C8E /* MainViewController.swift */,
+				FCCA2A42230EB916007E6C8E /* MapViewController.swift */,
+				FCCA2A44230EB97C007E6C8E /* LocationViewController.swift */,
+				FCCA2A46230EB9D2007E6C8E /* CompletedViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043BE12D230EB2C3004D12B1 /* ViewController.swift in Sources */,
 				043BE12B230EB2C3004D12B1 /* AppDelegate.swift in Sources */,
+				FCCA2A43230EB916007E6C8E /* MapViewController.swift in Sources */,
+				FCCA2A41230EB8FD007E6C8E /* MainViewController.swift in Sources */,
+				FCCA2A47230EB9D2007E6C8E /* CompletedViewController.swift in Sources */,
+				FCCA2A45230EB97C007E6C8E /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
