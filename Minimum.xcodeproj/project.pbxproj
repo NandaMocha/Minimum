@@ -70,12 +70,19 @@
 			path = Minimum;
 			sourceTree = "<group>";
 		};
+		B625A9E2230F414400915B0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FCCA2A39230EB890007E6C8E /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				B625A9E2230F414400915B0A /* View */,
 				043BE12E230EB2C3004D12B1 /* Main.storyboard */,
 				FCCA2A3F230EB8C2007E6C8E /* Controller */,
-				FCCA2A3E230EB8BE007E6C8E /* View */,
 				FCCA2A3D230EB8AA007E6C8E /* Model */,
 			);
 			path = Pages;
@@ -109,13 +116,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		FCCA2A3E230EB8BE007E6C8E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		FCCA2A3F230EB8C2007E6C8E /* Controller */ = {
@@ -351,8 +351,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9NAU7R3577;
+				DEVELOPMENT_TEAM = YU888KGFV4;
 				INFOPLIST_FILE = Minimum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,8 +370,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9NAU7R3577;
+				DEVELOPMENT_TEAM = YU888KGFV4;
 				INFOPLIST_FILE = Minimum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
