@@ -15,6 +15,8 @@
 		FCCA2A43230EB916007E6C8E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A42230EB916007E6C8E /* MapViewController.swift */; };
 		FCCA2A45230EB97C007E6C8E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A44230EB97C007E6C8E /* LocationViewController.swift */; };
 		FCCA2A47230EB9D2007E6C8E /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A46230EB9D2007E6C8E /* CompletedViewController.swift */; };
+		FCCA2A4D230EBC9A007E6C8E /* homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCA2A4C230EBC9A007E6C8E /* homepage.storyboard */; };
+		FCCA2A4F230EBCCD007E6C8E /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A4E230EBCCD007E6C8E /* HomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		FCCA2A42230EB916007E6C8E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FCCA2A44230EB97C007E6C8E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		FCCA2A46230EB9D2007E6C8E /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
+		FCCA2A48230EBC40007E6C8E /* Minimum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Minimum.entitlements; sourceTree = "<group>"; };
+		FCCA2A4C230EBC9A007E6C8E /* homepage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = homepage.storyboard; sourceTree = "<group>"; };
+		FCCA2A4E230EBCCD007E6C8E /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +51,7 @@
 			children = (
 				043BE129230EB2C3004D12B1 /* Minimum */,
 				043BE128230EB2C3004D12B1 /* Products */,
+				FCCA2A49230EBC42007E6C8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +66,7 @@
 		043BE129230EB2C3004D12B1 /* Minimum */ = {
 			isa = PBXGroup;
 			children = (
+				FCCA2A48230EBC40007E6C8E /* Minimum.entitlements */,
 				FCCA2A3A230EB896007E6C8E /* Utils */,
 				FCCA2A39230EB890007E6C8E /* Pages */,
 				043BE12A230EB2C3004D12B1 /* AppDelegate.swift */,
@@ -74,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				043BE12E230EB2C3004D12B1 /* Main.storyboard */,
+				FCCA2A4C230EBC9A007E6C8E /* homepage.storyboard */,
 				FCCA2A3F230EB8C2007E6C8E /* Controller */,
 				FCCA2A3E230EB8BE007E6C8E /* View */,
 				FCCA2A3D230EB8AA007E6C8E /* Model */,
@@ -123,10 +131,18 @@
 			children = (
 				FCCA2A40230EB8FD007E6C8E /* MainViewController.swift */,
 				FCCA2A42230EB916007E6C8E /* MapViewController.swift */,
+				FCCA2A4E230EBCCD007E6C8E /* HomePageViewController.swift */,
 				FCCA2A44230EB97C007E6C8E /* LocationViewController.swift */,
 				FCCA2A46230EB9D2007E6C8E /* CompletedViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCCA2A49230EBC42007E6C8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +177,14 @@
 				TargetAttributes = {
 					043BE126230EB2C3004D12B1 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -187,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCA2A4D230EBC9A007E6C8E /* homepage.storyboard in Resources */,
 				043BE135230EB2C5004D12B1 /* LaunchScreen.storyboard in Resources */,
 				043BE132230EB2C5004D12B1 /* Assets.xcassets in Resources */,
 				043BE130230EB2C3004D12B1 /* Main.storyboard in Resources */,
@@ -202,6 +227,7 @@
 			files = (
 				043BE12B230EB2C3004D12B1 /* AppDelegate.swift in Sources */,
 				FCCA2A43230EB916007E6C8E /* MapViewController.swift in Sources */,
+				FCCA2A4F230EBCCD007E6C8E /* HomePageViewController.swift in Sources */,
 				FCCA2A41230EB8FD007E6C8E /* MainViewController.swift in Sources */,
 				FCCA2A47230EB9D2007E6C8E /* CompletedViewController.swift in Sources */,
 				FCCA2A45230EB97C007E6C8E /* LocationViewController.swift in Sources */,
@@ -350,8 +376,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Minimum/Minimum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9NAU7R3577;
+				DEVELOPMENT_TEAM = 8423A3VRM7;
 				INFOPLIST_FILE = Minimum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,8 +395,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Minimum/Minimum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9NAU7R3577;
+				DEVELOPMENT_TEAM = 8423A3VRM7;
 				INFOPLIST_FILE = Minimum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
