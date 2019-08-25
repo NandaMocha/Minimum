@@ -11,6 +11,8 @@
 		043BE130230EB2C3004D12B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043BE12E230EB2C3004D12B1 /* Main.storyboard */; };
 		043BE132230EB2C5004D12B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043BE131230EB2C5004D12B1 /* Assets.xcassets */; };
 		043BE135230EB2C5004D12B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043BE133230EB2C5004D12B1 /* LaunchScreen.storyboard */; };
+		B625A9E4230FC93F00915B0A /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625A9E3230FC93F00915B0A /* CustomAnnotation.swift */; };
+		B625A9E6230FC99C00915B0A /* MarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625A9E5230FC99C00915B0A /* MarkerAnnotationView.swift */; };
 		FCCA2A41230EB8FD007E6C8E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A40230EB8FD007E6C8E /* MainViewController.swift */; };
 		FCCA2A43230EB916007E6C8E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A42230EB916007E6C8E /* MapViewController.swift */; };
 		FCCA2A45230EB97C007E6C8E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA2A44230EB97C007E6C8E /* LocationViewController.swift */; };
@@ -24,6 +26,8 @@
 		043BE131230EB2C5004D12B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043BE134230EB2C5004D12B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043BE136230EB2C5004D12B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B625A9E3230FC93F00915B0A /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		B625A9E5230FC99C00915B0A /* MarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerAnnotationView.swift; sourceTree = "<group>"; };
 		FCCA2A40230EB8FD007E6C8E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FCCA2A42230EB916007E6C8E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FCCA2A44230EB97C007E6C8E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -70,12 +74,19 @@
 			path = Minimum;
 			sourceTree = "<group>";
 		};
+		B625A9E2230F414400915B0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FCCA2A39230EB890007E6C8E /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				B625A9E2230F414400915B0A /* View */,
 				043BE12E230EB2C3004D12B1 /* Main.storyboard */,
 				FCCA2A3F230EB8C2007E6C8E /* Controller */,
-				FCCA2A3E230EB8BE007E6C8E /* View */,
 				FCCA2A3D230EB8AA007E6C8E /* Model */,
 			);
 			path = Pages;
@@ -107,15 +118,10 @@
 		FCCA2A3D230EB8AA007E6C8E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B625A9E3230FC93F00915B0A /* CustomAnnotation.swift */,
+				B625A9E5230FC99C00915B0A /* MarkerAnnotationView.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		FCCA2A3E230EB8BE007E6C8E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		FCCA2A3F230EB8C2007E6C8E /* Controller */ = {
@@ -204,7 +210,9 @@
 				FCCA2A43230EB916007E6C8E /* MapViewController.swift in Sources */,
 				FCCA2A41230EB8FD007E6C8E /* MainViewController.swift in Sources */,
 				FCCA2A47230EB9D2007E6C8E /* CompletedViewController.swift in Sources */,
+				B625A9E6230FC99C00915B0A /* MarkerAnnotationView.swift in Sources */,
 				FCCA2A45230EB97C007E6C8E /* LocationViewController.swift in Sources */,
+				B625A9E4230FC93F00915B0A /* CustomAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,8 +359,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9NAU7R3577;
+				DEVELOPMENT_TEAM = YU888KGFV4;
 				INFOPLIST_FILE = Minimum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,8 +378,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9NAU7R3577;
+				DEVELOPMENT_TEAM = YU888KGFV4;
 				INFOPLIST_FILE = Minimum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
