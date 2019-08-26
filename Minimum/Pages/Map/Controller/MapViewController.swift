@@ -16,6 +16,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     //MARK: IBOutlets
     //outlets to be used
     @IBOutlet weak var userMapView: MKMapView!
+    @IBOutlet weak var navigateButton: UIButton!
     
     //MARK: Variables
     //variables to be used
@@ -42,6 +43,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var navigation: [CLLocationCoordinate2D] = []
     
+    var latPinPoint: Double = 0.0
+    var longPinPoint: Double = 0.0
+    
     //MARK: View Did Load
     //when the ui elements is being loaded
     override func viewDidLoad() {
@@ -52,6 +56,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         //calling the getRouteDirection function to start showing the route direction to the destination
         //getRouteDirection()
+        addPinPoint()
+        
     }
     
     
@@ -227,7 +233,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBAction func navigateAction(_ sender: Any) {
         
         let sourceLocation = CLLocationCoordinate2D(latitude: userLocation?.coordinate.latitude ?? -6.301492, longitude: userLocation?.coordinate.longitude ?? 106.652992)
-        let destinationLocation = CLLocationCoordinate2D(latitude: -6.298421, longitude: 106.669778)
+        //let destinationLocation = CLLocationCoordinate2D(latitude: -6.298421, longitude: 106.669778)
+        
+        let destinationLocation = CLLocationCoordinate2D(latitude: latPinPoint, longitude: longPinPoint)
         
             let pointDestination = MKPointAnnotation()
             pointDestination.coordinate = CLLocationCoordinate2D(
@@ -286,6 +294,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let directions = MKDirections(request: directionRequest)
         userMapView.removeOverlays(userMapView.overlays)
+        
         
         directions.calculate {
             (response, error) -> Void in
@@ -348,5 +357,36 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             print("Hei, Your Picker already Arrive!")
         }
     }
+    
+    func addPinPoint(){
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.addPinPointGesture))
+        userMapView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func addPinPointGesture(gestureReconizer: UILongPressGestureRecognizer){
+        let location = gestureReconizer.location(in: userMapView)
+        let coordinate = userMapView.convert(location, toCoordinateFrom: userMapView)
+        
+        let annotation = MKPointAnnotation()
+        
+        annotation.coordinate = coordinate
+        annotation.title = "Pick Up Location"
+        
+        for annotationPoint in userMapView.annotations{
+            if annotationPoint.title == "Pick Up Location" {
+                self.userMapView.removeAnnotation(annotationPoint)
+                self.userMapView.removeAnnotations(userMapView.annotations)
+                self.navigation.removeAll()
+                self.userMapView.removeOverlays(userMapView.overlays)
+            }
+        }
+        
+        self.userMapView.addAnnotation(annotation)
+        
+        latPinPoint = coordinate.latitude
+        longPinPoint = coordinate.longitude
+        
+    }
+    
     
 }
