@@ -57,7 +57,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //calling the getRouteDirection function to start showing the route direction to the destination
         //getRouteDirection()
         addPinPoint()
-        
     }
     
     
@@ -209,8 +208,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         return renderer
     }
-    
-    //=======================================================
     
     //MARK: Button Action
     //action when button clicked
